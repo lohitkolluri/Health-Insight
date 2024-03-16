@@ -2,7 +2,8 @@
   import { Content } from "carbon-components-svelte";
 </script>
 <svelte:head>
-  <title>Health Insight </title> 
+  <title>Health Insight
+  </title> 
 </svelte:head>
 <style>
   .dot-pattern {
