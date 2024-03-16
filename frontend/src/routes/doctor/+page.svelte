@@ -5,7 +5,9 @@
 
   
 </script>
-
+<svelte:head>
+  <title>Health Insight Doctor</title> 
+</svelte:head>
 <div class="flex justify-around gap-x-2 h-[90vh] mx-15">
   <div class="w-2/3 h-full flex flex-col gap-y-3">
     <div class="h-2/3">
