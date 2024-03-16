@@ -52,7 +52,9 @@
     DoctorSocket.emit("patient_mode", false);
   });
 </script>
-
+<svelte:head>
+  <title>Health Insight Patient</title> 
+</svelte:head>
 <div class="h-[93vh] flex flex-col bg-repeat bg-x relative">
   <div class="flex flex-col gap-y-3 mb-22 lg:w-[60%] mx-auto">
     {#each x as y}
