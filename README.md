@@ -3,6 +3,10 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+
+<div align="center">
+  <img src="frontend/static/favicon.png" alt="Logo" width="80" height="80">
+</div>
 <h1 align="center" id="title">Health Insight</h1>
 <p id="description">Health Insight offers two distinct services: DoctorAI and PatientAI. DoctorAI provides invaluable support to healthcare professionals by suggesting relevant questions during patient assessments aiding in the diagnostic process. On the other hand PatientAI empowers individuals by allowing them to input their symptoms and medical history using voice commands. This feature enables patients to receive personalized insights access health education schedule appointments and monitor their health remotely. By combining these services Health Insight aims to revolutionize healthcare delivery for both doctors and patients fostering improved communication efficiency and outcomes.</p>
 
@@ -49,12 +53,12 @@ npm start
 
 Technologies used in the project:
 
-*   HTML
-*   TypeScript
-*   CSS
-*   Python3
-*   Svelte
-*   NodeJs
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* ![Python3](https://img.shields.io/badge/python3-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+* ![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)
+* ![NodeJs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 
 
