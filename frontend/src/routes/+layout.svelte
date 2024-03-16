@@ -10,4 +10,9 @@
 <div class="mt-15" >
   <slot />
 </div>
+<style>
+  :global(body) {
+    background: radial-gradient(#27212e, #221530);
+    color: #d9c9ee;
+}</style>
 
