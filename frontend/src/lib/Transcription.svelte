@@ -19,7 +19,7 @@
 </script>
 
 <div
-  class="h-full border-2 border-gray-600 border-solid flex flex-col overflow-x-hidden"
+  class="h-full border-2 border-[#250358] border-solid flex flex-col overflow-x-hidden rounded"
 >
   <Tile class="w-full flex justify-between">
     <p class="text-lg">Your conversation</p>

@@ -25,7 +25,7 @@
 </script>
 
 <div class="flex gap-2 h-full">
-  <div class="w-1/2 border-gray-600 border-2 border-solid h-full">
+  <div class="w-1/2 border-[#250358] border-2 border-solid h-full rounded">
     <Tile>
       <p>Potential Diagnosis</p>
     </Tile>
@@ -35,7 +35,7 @@
       </Content>
     </div>
   </div>
-  <div class="w-1/2 border-gray-600 border-2 border-solid h-full">
+  <div class="w-1/2 border-[#250358] border-2 border-solid h-full rounded">
     <Tile>
       <p>Suggested Questions</p>
     </Tile>

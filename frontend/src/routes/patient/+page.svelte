@@ -7,7 +7,7 @@
     TextInputSkeleton,
   } from "carbon-components-svelte";
   import SendFilled from "carbon-icons-svelte/lib/SendFilled.svelte";
-  import Monster from "carbon-icons-svelte/lib/Monster.svelte";
+  import Stethoscope from "carbon-icons-svelte/lib/Stethoscope.svelte";
   import { DoctorSocket } from "../../types";
   import { onDestroy } from "svelte";
 
@@ -56,18 +56,18 @@
   <title>Health Insight Patient</title> 
 </svelte:head>
 <div class="h-[93vh] flex flex-col bg-repeat bg-x relative">
-  <div class="flex flex-col gap-y-3 mb-22 lg:w-[60%] mx-auto">
+  <div class="flex flex-col gap-y-3  mb-22 lg:w-[70%] mx-auto">
     {#each x as y}
       <div
-        class="flex {y.type === 'patient' ? 'flex-row-reverse' : 'flex-row'}"
+        class="flex   {y.type === 'patient' ? 'flex-row-reverse' : 'flex-row'}"
       >
         {#if y.type !== "patient"}
-          <div class="rounded-full bg-dark-400">
-            <Monster size={32} class="block m-auto" />
+          <div class="rounded-full pt-20px">
+            <Stethoscope size={32} class="block m-auto " />
           </div>
         {/if}
         <Tile
-          class="w-[60%] rounded-md shadow-sm {y.type === 'patient'
+          class="w-[60%] bg-gradient-to-r from-[#250358] to-[#440c66] rounded-md shadow-sm {y.type === 'patient'
             ? 'ml-auto'
             : 'mr-auto'}"
         >
