@@ -111,6 +111,7 @@ body {
 <Content>
   <div class="dot-pattern"></div>
   <div class="header">
+    <img src="/favicon.png" alt="Health Insight" />
     <h1 class="text-3xl font-bold title mb-4">Welcome to Health Insight</h1>
     <div class="card-content">
       <p class="text-lg">
@@ -150,5 +151,6 @@ body {
       </div>
     </div>
   </ul>
+  <div class="text-base text-gray-400 align-center text-center">BY TEAM: NOIRINSIGHT</div>
   </div>
 </Content>
