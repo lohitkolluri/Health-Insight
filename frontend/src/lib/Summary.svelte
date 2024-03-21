@@ -8,10 +8,9 @@
   let value = ``;
 
   onMount(() => {
-
     DoctorSocket.on("generate_notes", (x) => {
       console.log(x);
-      value = x
+      value = x;
     });
   });
 
@@ -20,9 +19,28 @@
   };
 
   const setSummary = () => {
-    DoctorSocket.emit("set_summary", value)
-  };
+    // Create a Blob with the summary content
+    const blob = new Blob([value], { type: 'text/plain' });
 
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.style.display = 'none';
+
+    // Set the href attribute to a URL created from the Blob
+    a.href = window.URL.createObjectURL(blob);
+
+    // Set the download attribute to specify the file name
+    a.download = 'consultation_summary.txt';
+
+    // Append the anchor to the body
+    document.body.appendChild(a);
+
+    // Simulate a click on the anchor to trigger the download
+    a.click();
+
+    // Remove the anchor from the body
+    document.body.removeChild(a);
+  };
 </script>
 
 <div class="w-full flex flex-col justify-start">
@@ -38,12 +56,8 @@
     rows={30}
   />
   <ButtonSet class="flex justify-end mt-2">
-
-    <Button icon={DiagramReference} class="block" kind="secondary" on:click={generate}
-      >Generate</Button
-    >
+    <Button icon={DiagramReference} class="block" kind="secondary" on:click={generate}>Generate</Button>
     <Button on:click={setSummary} class="block" icon={ArrowRight}>Save</Button>
   </ButtonSet>
-
   <div />
 </div>

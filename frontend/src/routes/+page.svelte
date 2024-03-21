@@ -102,7 +102,7 @@ body {
   .card p {
   color: #fff;
   margin: 0;
-  text-align: center;
+  text-align: justify;
   font-size: 0.85rem;
 }
 

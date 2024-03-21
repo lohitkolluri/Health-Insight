@@ -1,34 +1,25 @@
 <script lang="ts">
   import { Tile, Content } from "carbon-components-svelte";
   import SvelteMarkdown from "svelte-markdown";
-  import CircleDash from "carbon-icons-svelte/lib/CircleDash.svelte";
-
   import { DoctorSocket, type TranscriptMessage } from "../types";
   import { onMount } from "svelte";
 
   let live: string;
-  let loading = false;
 
   onMount(async () => {
     DoctorSocket.on("transcript", (x) => {
       console.log(x);
-      loading = true;
       live = x.replaceAll("\n", "\n\n");
     });
   });
 </script>
 
-<div
-  class="h-full border-2 border-[#250358] border-solid flex flex-col overflow-x-hidden rounded"
->
-  <Tile class="w-full flex justify-between">
-    <p class="text-lg">Your conversation</p>
-    <CircleDash
-      class="w-6 h-6 block  {loading && 'animate-duration-[1s] animate-pulse'}"
-    />
+<div class="conversation-container">
+  <Tile class="conversation-header">
+    <p class="conversation-title">Your conversation</p>
   </Tile>
 
-  <Content class="overflow-y-scroll">
+  <Content class="conversation-content">
     {#if live}
       <SvelteMarkdown source={live} />
     {:else}
@@ -36,3 +27,36 @@
     {/if}
   </Content>
 </div>
+
+<style>
+  .conversation-container {
+    border: 2px solid #250358;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    position: relative; /* Add relative positioning to the container */
+  }
+
+  .conversation-header {
+    padding: 10px;
+    background-color: #250358;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .conversation-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .conversation-content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    position: relative; /* Add relative positioning to the content */
+  }
+</style>
