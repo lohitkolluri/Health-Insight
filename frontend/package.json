@@ -26,7 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dotenv": "^16.0.3",
+		"dotenv": "^16.4.7",
 		"socket.io-client": "^4.6.1",
 		"svelte-markdown": "^0.2.3"
 	}
